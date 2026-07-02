@@ -9,4 +9,4 @@ rendercv_output/
 *.swp
 
 # Digest
-.digest
+digest.txt
