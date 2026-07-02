@@ -1,0 +1,12 @@
+# Renderd staff
+rendercv_output/
+
+# MacOS 
+.DS_Store
+
+# Editor
+.vscode/
+*.swp
+
+# Digest
+.digest
