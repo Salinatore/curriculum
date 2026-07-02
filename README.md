@@ -1,6 +1,6 @@
 # CV
 
-My CV, written in YAML and built with [RenderCV](https://docs.rendercv.com). The latest version is always available on [GitHub Pages](https://salinatore.github.io/curriculum/cv.pdf).
+My CV, written in YAML and built with [RenderCV](https://docs.rendercv.com). The latest version is always available on GitHub Pages [here](https://salinatore.github.io/curriculum/cv.pdf).
 
 ## Updating the CV
 
