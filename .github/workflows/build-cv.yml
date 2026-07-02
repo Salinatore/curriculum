@@ -1,0 +1,53 @@
+# .github/workflows/build-cv.yml
+name: Build and Deploy CV
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.yaml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v8
+
+      - name: Render CV to PDF
+        run: |
+          uvx --from 'rendercv[full]' rendercv render Alessandro_Gardini_CV_IT.yaml \
+            --dont-generate-markdown --dont-generate-html --dont-generate-png
+
+      - name: Prepare Pages folder
+        run: |
+          mkdir -p public
+          cp rendercv_output/*.pdf public/cv.pdf
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
