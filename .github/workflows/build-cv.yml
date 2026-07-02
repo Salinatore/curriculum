@@ -30,7 +30,7 @@ jobs:
 
       - name: Render CV to PDF
         run: |
-          uvx rendercv render Alessandro_Gardini_CV_IT.yaml \
+          uvx --from "rendercv[full]" rendercv render Alessandro_Gardini_CV_IT.yaml \
             --dont-generate-markdown --dont-generate-html --dont-generate-png
 
       - name: Prepare Pages folder
