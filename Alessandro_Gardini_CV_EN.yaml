@@ -16,7 +16,7 @@ cv:
         end_date: 2026-07
         location: Cesena, FC
         highlights:
-          - "Final grade: TODO"
+          - "Final grade: 110/110"
           - "Thesis: Design of a protocol-agnostic framework for swarm coordination in the context of Project Emerge"
           - "Advisor: Prof. Mirko Viroli"
           - "Co-advisors: Gianluca Aguzzi, Nicolas Farabegoli"
