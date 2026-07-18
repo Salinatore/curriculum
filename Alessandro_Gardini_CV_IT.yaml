@@ -9,9 +9,6 @@ cv:
       username: Salinatore
 
   sections:
-    Profilo: 
-    - Qui il profilo
-
     istruzione:
       - institution: Università di Bologna
         area: Laurea Triennale in Ingegneria e Scienze Informatiche
@@ -19,10 +16,10 @@ cv:
         end_date: 2026-07
         location: Cesena, FC
         highlights:
-          - 'Voto finale: TODO'
-          - 'Tesi: Progettazione di un framework protocol-agnostic per il coordinamento di sciami nel contesto di Project Emerge'
-          - 'Relatore: Prof. Mirko Viroli'
-          - 'Correlatori: Gianluca Aguzzi, Nicolas Farabegoli'
+          - "Voto finale: TODO"
+          - "Tesi: Progettazione di un framework protocol-agnostic per il coordinamento di sciami nel contesto di Project Emerge"
+          - "Relatore: Prof. Mirko Viroli"
+          - "Correlatori: Gianluca Aguzzi, Nicolas Farabegoli"
 
     esperienza:
       - company: Università di Bologna
@@ -30,35 +27,44 @@ cv:
         start_date: 2026-02
         end_date: 2026-05
         location: Cesena, FC
-        summary: 
+        summary:
         highlights:
-          - 'Progettato e implementato un domain gateway protocol-agnostic per disaccoppiare il broker MQTT interno del sistema Project Emerge dai client esterni, abilitando l’integrazione di protocolli eterogenei (HTTP/REST, WebSocket, CoAP)'
-          - 'Sviluppato in Python 3.13 con architettura asincrona (asyncio), basata su connessioni modulari, bus di comunicazione interni e cache centralizzata, con dependency injection per estendibilità e testabilità'
-          - 'Realizzata una suite di test automatici (pytest) con copertura dell''88% e documentazione OpenAPI generata automaticamente'
-          - 'Codice disponibile su [GitHub](https://github.com/Salinatore/domain-gateway)'
+          - "Progettato e implementato un domain gateway protocol-agnostic per disaccoppiare il broker MQTT interno del sistema Project Emerge dai client esterni, abilitando l’integrazione di protocolli eterogenei (HTTP/REST, WebSocket, CoAP)"
+          - "Sviluppato in Python 3.13 con architettura asincrona (asyncio), basata su connessioni modulari, bus di comunicazione interni e cache centralizzata, con dependency injection per estendibilità e testabilità"
+          - "Realizzata una suite di test automatici (pytest) con copertura dell'88% e documentazione OpenAPI generata automaticamente"
+          - "Codice disponibile su [GitHub](https://github.com/Salinatore/domain-gateway)"
+
+      - company: Il Demodé
+        position: Cameriere (part-time, su chiamata)
+        start_date: 2022
+        end_date: 2024
+        location: Forlì, FC
+        summary:
+        highlights:
+          - "Servizio ai tavoli e assistenza alla clientela durante le serate presso il circolo/associazione culturale"
 
     progetti:
       - name: Korsa — Social Running Tracker (Android)
         start_date: 2026-05
-        end_date: 2026-06   
-        summary: 'Progetto universitario di gruppo (3 persone). App Android in Kotlin/Jetpack Compose per il tracciamento social di corse via GPS, con Supabase come backend.'
+        end_date: 2026-06
+        summary: "Progetto universitario di gruppo (3 persone). App Android in Kotlin/Jetpack Compose per il tracciamento social di corse via GPS, con Supabase come backend."
         highlights:
-          - 'Architettura MVVM con Jetpack Compose, Koin per la dependency injection e Navigation Compose'
-          - 'Tracciamento GPS tramite Location Provider come foreground service, con percorso salvato (su Supabase) in GeoJSON e visualizzato su mappa interattiva MapLibre e preview realizzata con un API di Google Map'
-          - 'Social: Possibilità visionare il profilo degli altri utenti e seguirli; mettere like e commenti ad una corsa' 
-          - 'Autenticazione via email/password e Google Sign-In'
-          - 'Sistema di sfide settimanali gestito con WorkManager (notifiche schedulate, persistenza tramite DataStore, ripristino dopo riavvio del dispositivo)'
-          - 'Codice disponibile su [GitHub](https://github.com/Sohaib-Ouakani/korsa)'
+          - "Architettura MVVM con Jetpack Compose, Koin per la dependency injection e Navigation Compose"
+          - "Tracciamento GPS tramite Location Provider come foreground service, con percorso salvato (su Supabase) in GeoJSON e visualizzato su mappa interattiva MapLibre e preview realizzata con un API di Google Map"
+          - "Social: Possibilità visionare il profilo degli altri utenti e seguirli; mettere like e commenti ad una corsa"
+          - "Autenticazione via email/password e Google Sign-In"
+          - "Sistema di sfide settimanali gestito con WorkManager (notifiche schedulate, persistenza tramite DataStore, ripristino dopo riavvio del dispositivo)"
+          - "Codice disponibile su [GitHub](https://github.com/Sohaib-Ouakani/korsa)"
 
       - name: Smart Tank Monitoring System — Monitoraggio IoT di una cisterna
-        start_date: '2025-12'
-        end_date: '2026-01'
-        summary: 'Progetto universitario di gruppo (4 persone), terzo di tre assignment del corso di Sistemi Embedded e IoT (dopo un gioco su Arduino e uno smart hangar per droni basato su FSM). Sistema IoT distribuito su 4 sottosistemi (MQTT, seriale, HTTP) per monitorare il livello dell''acqua in una cisterna e controllare l''apertura di un canale di scarico'
+        start_date: "2025-12"
+        end_date: "2026-01"
+        summary: "Progetto universitario di gruppo (4 persone), terzo di tre assignment del corso di Sistemi Embedded e IoT (dopo un gioco su Arduino e uno smart hangar per droni basato su FSM). Sistema IoT distribuito su 4 sottosistemi (MQTT, seriale, HTTP) per monitorare il livello dell'acqua in una cisterna e controllare l'apertura di un canale di scarico"
         highlights:
-          - 'Sviluppato il sottosistema di monitoraggio (TMS) su ESP32 con architettura a task/FreeRTOS e macchina a stati finiti, per la lettura del sensore a ultrasuoni e l''invio dei dati via MQTT'
-          - 'Realizzato il Control Unit Subsystem (CUS) in Python/FastAPI/asyncio, orchestrando la comunicazione MQTT, seriale e WebSocket e la logica di apertura automatica/manuale del canale'
-          - 'Sviluppata una dashboard web con Chart.js e WebSocket per la visualizzazione in tempo reale e il controllo remoto'
-          - 'Codice disponibile su [GitHub](https://github.com/Salinatore/IoT-assignements)'
+          - "Sviluppato il sottosistema di monitoraggio (TMS) su ESP32 con architettura a task/FreeRTOS e macchina a stati finiti, per la lettura del sensore a ultrasuoni e l'invio dei dati via MQTT"
+          - "Realizzato il Control Unit Subsystem (CUS) in Python/FastAPI/asyncio, orchestrando la comunicazione MQTT, seriale e WebSocket e la logica di apertura automatica/manuale del canale"
+          - "Sviluppata una dashboard web con Chart.js e WebSocket per la visualizzazione in tempo reale e il controllo remoto"
+          - "Codice disponibile su [GitHub](https://github.com/Salinatore/IoT-assignements)"
 
     competenze:
       - label: Linguaggi

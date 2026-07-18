@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - '*.yaml'
+      - "*.yaml"
   workflow_dispatch:
 
 permissions:
@@ -24,19 +24,27 @@ jobs:
 
       - name: Setup uv
         uses: astral-sh/setup-uv@v8.2.0
-        with: 
-            version: "0.11.26"
-            enable-cache: false
-
-      - name: Render CV to PDF
-        run: |
-          uvx --from "rendercv[full]" rendercv render Alessandro_Gardini_CV_IT.yaml \
-            --dont-generate-markdown --dont-generate-html --dont-generate-png
+        with:
+          version: "0.11.26"
+          enable-cache: false
 
       - name: Prepare Pages folder
+        run: mkdir -p public
+
+      - name: Render CV to PDF (Italian)
         run: |
-          mkdir -p public
-          cp rendercv_output/*.pdf public/cv.pdf
+          uvx --from "rendercv[full]" rendercv render Alessandro_Gardini_CV_IT.yaml \
+            --dont-generate-markdown --dont-generate-html --dont-generate-png \
+            --pdf-path public/cv-it.pdf
+
+      - name: Render CV to PDF (English)
+        run: |
+          uvx --from "rendercv[full]" rendercv render Alessandro_Gardini_CV_EN.yaml \
+            --dont-generate-markdown --dont-generate-html --dont-generate-png \
+            --pdf-path public/cv-en.pdf
+
+      - name: Alias default cv.pdf to Italian version
+        run: cp public/cv-it.pdf public/cv.pdf
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5

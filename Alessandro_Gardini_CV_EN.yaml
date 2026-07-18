@@ -1,0 +1,89 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
+cv:
+  name: Alessandro Gardini
+  location: Forlì, FC
+  email: a.gardo04@gmail.com
+  phone: "+393450239725"
+  social_networks:
+    - network: GitHub
+      username: Salinatore
+
+  sections:
+    education:
+      - institution: University of Bologna
+        area: Bachelor's Degree in Computer Science and Engineering
+        start_date: 2023-09
+        end_date: 2026-07
+        location: Cesena, FC
+        highlights:
+          - "Final grade: TODO"
+          - "Thesis: Design of a protocol-agnostic framework for swarm coordination in the context of Project Emerge"
+          - "Advisor: Prof. Mirko Viroli"
+          - "Co-advisors: Gianluca Aguzzi, Nicolas Farabegoli"
+
+    experience:
+      - company: University of Bologna
+        position: Intern in the Aggregate Computing research group
+        start_date: 2026-02
+        end_date: 2026-05
+        location: Cesena, FC
+        summary:
+        highlights:
+          - "Designed and implemented a protocol-agnostic domain gateway to decouple the internal MQTT broker of the Project Emerge system from external clients, enabling integration of heterogeneous protocols (HTTP/REST, WebSocket, CoAP)"
+          - "Developed in Python 3.13 with an asynchronous architecture (asyncio), based on modular connections, internal communication buses, and centralized caching, with dependency injection for extensibility and testability"
+          - "Built an automated test suite (pytest) with 88% coverage and auto-generated OpenAPI documentation"
+          - "Code available on [GitHub](https://github.com/Salinatore/domain-gateway)"
+
+      - company: Il Demodé
+        position: Waiter (part-time, on-call)
+        start_date: 2022
+        end_date: 2024
+        location: Forlì, FC
+        summary:
+        highlights:
+          - "Table service and customer assistance during evening shifts at the cultural club/association"
+
+    projects:
+      - name: Korsa — Social Running Tracker (Android)
+        start_date: 2026-05
+        end_date: 2026-06
+        summary: "University group project (3 people). Android app in Kotlin/Jetpack Compose for social GPS run tracking, with Supabase as backend."
+        highlights:
+          - "MVVM architecture with Jetpack Compose, Koin for dependency injection, and Navigation Compose"
+          - "GPS tracking via Location Provider as a foreground service, with routes saved (on Supabase) in GeoJSON and displayed on an interactive MapLibre map, with preview built using a Google Maps API"
+          - "Social features: ability to view other users' profiles and follow them; like and comment on a run"
+          - "Authentication via email/password and Google Sign-In"
+          - "Weekly challenges system managed with WorkManager (scheduled notifications, persistence via DataStore, restored after device reboot)"
+          - "Code available on [GitHub](https://github.com/Sohaib-Ouakani/korsa)"
+
+      - name: Smart Tank Monitoring System — IoT Cistern Monitoring
+        start_date: "2025-12"
+        end_date: "2026-01"
+        summary: "University group project (4 people), third of three assignments for the Embedded Systems and IoT course (after an Arduino-based game and an FSM-based smart drone hangar). Distributed IoT system across 4 subsystems (MQTT, serial, HTTP) to monitor water level in a cistern and control the opening of a drainage channel"
+        highlights:
+          - "Developed the Tank Monitoring Subsystem (TMS) on ESP32 with a task-based FreeRTOS architecture and finite state machine, for reading the ultrasonic sensor and sending data via MQTT"
+          - "Built the Control Unit Subsystem (CUS) in Python/FastAPI/asyncio, orchestrating MQTT, serial, and WebSocket communication and the automatic/manual channel opening logic"
+          - "Developed a web dashboard with Chart.js and WebSocket for real-time visualization and remote control"
+          - "Code available on [GitHub](https://github.com/Salinatore/IoT-assignements)"
+
+    skills:
+      - label: Languages
+        details: Python, Kotlin, Java, SQL, C
+
+      - label: Backend & Architecture
+        details: Asynchronous programming (asyncio), FastAPI, Dependency Injection, WebSocket, MQTT, CoAP, Testing (pytest, JUnit), OpenAPI
+
+      - label: Tools & Cloud
+        details: Git, LaTeX, Docker, Supabase
+
+design:
+  theme: classic
+
+locale:
+  language: english
+
+settings:
+  current_date: today
+  bold_keywords: []
+
+# RenderCV doc to use each time you edit something: https://docs.rendercv.com/user_guide/yaml_input_structure/
